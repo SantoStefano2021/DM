@@ -25,5 +25,10 @@ public class DefaultDispositivoMedicoService implements DispositivoMedicoSevice 
 	public List<DispositivoMedicoDTO> findAll() {
 		return dmC.findAllDevice();
 	}
+	
+	@Override
+	public List<DispositivoMedicoDTO> findByMatricola(String m){
+		return dmC.findByMatricola(m);
+	}
 
 }

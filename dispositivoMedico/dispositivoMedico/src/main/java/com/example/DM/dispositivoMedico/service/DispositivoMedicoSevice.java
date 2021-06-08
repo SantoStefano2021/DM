@@ -9,4 +9,6 @@ public interface DispositivoMedicoSevice {
 		 void insertMisuraDispositivoMedico( DispositivoMedicoDTO dm );
 		 
 		 List<DispositivoMedicoDTO> findAll();
+		 
+		 List<DispositivoMedicoDTO> findByMatricola(String m);
 }

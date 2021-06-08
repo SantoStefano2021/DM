@@ -38,5 +38,24 @@ public class DefaultDispositivoMedicoComponent implements DispositivoMedicoCompo
 				.map(commonMapper::map)
 				.collect(toList());
 	}
+	
+	
+	/**
+	 * 
+	 * @param matricola
+	 * @return 
+	 */
+	@Override
+	public List<DispositivoMedicoDTO> findByMatricola(String matricola){
+		return dmDao.findByMatricola(matricola)
+				.stream()
+				.map(commonMapper::map)
+				.collect(toList());
+	
+	}
+	
+	
+	
+	
 
 }

@@ -9,4 +9,6 @@ public interface DispositivoMedicoComponent {
 	void saveDispositivoMedico(DispositivoMedicoDTO dm);
 	
 	List<DispositivoMedicoDTO> findAllDevice();
+	
+	List<DispositivoMedicoDTO> findByMatricola(String matricola);
 }
