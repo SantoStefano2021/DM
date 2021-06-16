@@ -2,12 +2,19 @@ package com.example.DM.dispositivoMedico.model;
 
 import static javax.persistence.GenerationType.AUTO;
 
+import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+
+import com.example.DM.dispositivoMedico.paziente.model.Paziente;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -21,11 +28,12 @@ import lombok.Setter;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class DispositivoMedico {
+public class DispositivoMedico implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = AUTO)
-	private Long id_dispositivo;
+	@Column(name = "id_dispositivo")
+	private Long idDispositivo;
 	
 	@Column(name = "nome_dispositivo")
 	private String nomeDispositivo;
@@ -42,9 +50,14 @@ public class DispositivoMedico {
 	
 	private String matricola;
 	
-	@Column(name = "nome_paziente")
-	private String nomePaziente;
+	//lista pazienti essendo una relazione dico anche che voglio il caricamento 
+	// lazy ovvero non caricarmeli subito tutti. invece con eager li caricava tutti
+	@ManyToMany(fetch = FetchType.LAZY , cascade = CascadeType.ALL,mappedBy = "listaDispositivo")
+	//@JoinColumn(name="nome_paziente")
+	List<Paziente> listaPazienti;
 	
 	@Column(name = "owner_dispositivo")
 	private String ownerDispositivo;
+	
+	
 }
