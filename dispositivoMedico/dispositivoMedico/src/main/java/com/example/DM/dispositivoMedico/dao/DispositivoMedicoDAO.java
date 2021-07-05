@@ -11,4 +11,9 @@ import com.example.DM.dispositivoMedico.model.DispositivoMedico;
 public interface DispositivoMedicoDAO extends JpaRepository<DispositivoMedico, String> {
 
 	List<DispositivoMedico> findByMatricola(String matricola);
+	
+	List<DispositivoMedico> findByListaPazienti(String nome);
+	//alt shit r
+	
+	
 }
