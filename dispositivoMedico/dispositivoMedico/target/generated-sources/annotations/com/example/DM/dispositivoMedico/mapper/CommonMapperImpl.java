@@ -11,14 +11,14 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2021-07-05T11:01:13+0200",
+    date = "2021-07-05T12:25:59+0200",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 1.8.0-262 (OpenLogic-OpenJDK)"
 )
 @Component
 public class CommonMapperImpl implements CommonMapper {
 
     @Override
-    public DispositivoMedico pipparella(DispositivoMedicoDTO dispDTO) {
+    public DispositivoMedico map(DispositivoMedicoDTO dispDTO) {
         if ( dispDTO == null ) {
             return null;
         }
@@ -56,7 +56,7 @@ public class CommonMapperImpl implements CommonMapper {
     }
 
     @Override
-    public DispositivoMedicoServizioDTO pipparella(DispositivoMedicoServizio dmS) {
+    public DispositivoMedicoServizioDTO map(DispositivoMedicoServizio dmS) {
         if ( dmS == null ) {
             return null;
         }
@@ -72,7 +72,7 @@ public class CommonMapperImpl implements CommonMapper {
     }
 
     @Override
-    public DispositivoMedicoAccountDTO pipparella(DispositivoMedicoAccount dispAcc) {
+    public DispositivoMedicoAccountDTO map(DispositivoMedicoAccount dispAcc) {
         if ( dispAcc == null ) {
             return null;
         }
