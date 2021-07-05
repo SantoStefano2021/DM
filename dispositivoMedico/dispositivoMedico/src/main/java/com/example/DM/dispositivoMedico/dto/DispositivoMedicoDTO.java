@@ -20,16 +20,20 @@ import lombok.Setter;
 @AllArgsConstructor
 public class DispositivoMedicoDTO implements Serializable{
 
-	@NotEmpty(message="No vacant")
+	@NotEmpty(message="Non vuoto attenzione ", groups = gruppoUno.class)
 	private String nomeDispositivo;
-	
+
+
 	private String unitaDiMisurazione;
 	private String misurazione;
 	private Date timestamp;
 	private Date dataOperazione;
 	private String matricola;
 	private String nomePaziente;
-		
+
+	private String nomeCalciatore;
+	//Comunicate con un sitema esterno, il dto che vi passo ha la property oner mentre io la chiamo ownerDispositivo
+	// quindi quando incontro wner per me è ownerDispositivo
 	@JsonProperty(value="owner")
 	private String ownerDispositivo;
 }

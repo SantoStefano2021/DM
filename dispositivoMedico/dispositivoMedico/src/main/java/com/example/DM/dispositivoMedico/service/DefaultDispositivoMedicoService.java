@@ -3,7 +3,9 @@ package com.example.DM.dispositivoMedico.service;
 import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
+import com.example.DM.dispositivoMedico.model.DispositivoMedico;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -87,6 +89,35 @@ public class DefaultDispositivoMedicoService implements DispositivoMedicoSevice 
 	public List<DispositivoMedicoDTO> getDispByPaziente(String nomePZ) {
 		
 		return dmC.getDispByPaziente(nomePZ);
+	}
+
+	@Override
+	public List<DispositivoMedicoDTO> getDispByOwner(String nomeOw) {
+		return dmC.getDispByOwner(nomeOw);
+	}
+
+	@Override
+	public String logIn(HttpSession s) {
+		// TODO Auto-generated method stub
+		return dmC.logIn(s);
+	}
+
+	@Override
+	public String getSensors(HttpSession s) {
+		// TODO Auto-generated method stub
+		return dmC.getSensors(s);
+	}
+
+	@Override
+	public String getDevice(HttpSession s) {
+		// TODO Auto-generated method stub
+		return dmC.getDevice(s);
+	}
+
+	@Override
+	public String logOut(HttpSession s) {
+		// TODO Auto-generated method stub
+		return dmC.logOut(s);
 	}
 
 	

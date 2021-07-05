@@ -8,15 +8,22 @@ import com.example.DM.dispositivoMedico.dto.DispositivoMedicoDTO;
 import com.example.DM.dispositivoMedico.model.DispositivoMedico;
 import com.example.DM.dispositivoMedico.servizio.DispositivoMedicoServizio;
 import com.example.DM.dispositivoMedico.servizio.dto.DispositivoMedicoServizioDTO;
+import org.mapstruct.Mapping;
 
+//mapstract libreria esterna
+//è una classe di mapper--spring è un bean che mi devi gestire registrare la classe all'interno del contesto
 @Mapper(componentModel = "spring")
 public interface CommonMapper {
 
-	DispositivoMedico map(DispositivoMedicoDTO dispDTO);
+	//oggetto target 		source
+	DispositivoMedico pipparella(DispositivoMedicoDTO dispDTO);
+
+
+@Mapping(source = " disp.calciatore.nome" , target = "nomeCalciatore")
 
 	DispositivoMedicoDTO map(DispositivoMedico disp);
 	
-	DispositivoMedicoServizioDTO map (DispositivoMedicoServizio dmS);
+	DispositivoMedicoServizioDTO pipparella(DispositivoMedicoServizio dmS);
 	
-	DispositivoMedicoAccountDTO map (DispositivoMedicoAccount dispAcc);
+	DispositivoMedicoAccountDTO pipparella(DispositivoMedicoAccount dispAcc);
 }

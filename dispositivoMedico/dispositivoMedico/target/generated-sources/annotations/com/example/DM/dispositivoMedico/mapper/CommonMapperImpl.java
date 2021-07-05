@@ -1,5 +1,6 @@
 package com.example.DM.dispositivoMedico.mapper;
 
+import com.example.DM.dispositivoMedico.Calciatore;
 import com.example.DM.dispositivoMedico.account.DispositivoMedicoAccount;
 import com.example.DM.dispositivoMedico.account.dto.DispositivoMedicoAccountDTO;
 import com.example.DM.dispositivoMedico.dto.DispositivoMedicoDTO;
@@ -11,14 +12,14 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2021-06-16T17:35:19+0200",
+    date = "2021-07-05T10:19:43+0200",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 1.8.0-262 (OpenLogic-OpenJDK)"
 )
 @Component
 public class CommonMapperImpl implements CommonMapper {
 
     @Override
-    public DispositivoMedico map(DispositivoMedicoDTO dispDTO) {
+    public DispositivoMedico pipparella(DispositivoMedicoDTO dispDTO) {
         if ( dispDTO == null ) {
             return null;
         }
@@ -44,6 +45,7 @@ public class CommonMapperImpl implements CommonMapper {
 
         DispositivoMedicoDTO dispositivoMedicoDTO = new DispositivoMedicoDTO();
 
+        dispositivoMedicoDTO.setNomeCalciatore( dispCalciatoreNome( disp ) );
         dispositivoMedicoDTO.setNomeDispositivo( disp.getNomeDispositivo() );
         dispositivoMedicoDTO.setUnitaDiMisurazione( disp.getUnitaDiMisurazione() );
         dispositivoMedicoDTO.setMisurazione( disp.getMisurazione() );
@@ -56,7 +58,7 @@ public class CommonMapperImpl implements CommonMapper {
     }
 
     @Override
-    public DispositivoMedicoServizioDTO map(DispositivoMedicoServizio dmS) {
+    public DispositivoMedicoServizioDTO pipparella(DispositivoMedicoServizio dmS) {
         if ( dmS == null ) {
             return null;
         }
@@ -72,7 +74,7 @@ public class CommonMapperImpl implements CommonMapper {
     }
 
     @Override
-    public DispositivoMedicoAccountDTO map(DispositivoMedicoAccount dispAcc) {
+    public DispositivoMedicoAccountDTO pipparella(DispositivoMedicoAccount dispAcc) {
         if ( dispAcc == null ) {
             return null;
         }
@@ -83,5 +85,20 @@ public class CommonMapperImpl implements CommonMapper {
         dispositivoMedicoAccountDTO.setPassword( dispAcc.getPassword() );
 
         return dispositivoMedicoAccountDTO;
+    }
+
+    private String dispCalciatoreNome(DispositivoMedico dispositivoMedico) {
+        if ( dispositivoMedico == null ) {
+            return null;
+        }
+        Calciatore calciatore = dispositivoMedico.getCalciatore();
+        if ( calciatore == null ) {
+            return null;
+        }
+        String nome = calciatore.getNome();
+        if ( nome == null ) {
+            return null;
+        }
+        return nome;
     }
 }
