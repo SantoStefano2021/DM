@@ -8,7 +8,7 @@ import java.util.List;
 
 import javax.persistence.*;
 
-import com.example.DM.dispositivoMedico.Calciatore;
+//import com.example.DM.dispositivoMedico.Calciatore;
 import org.hibernate.annotations.BatchSize;
 
 import com.example.DM.dispositivoMedico.paziente.model.Paziente;
@@ -41,8 +41,8 @@ public class DispositivoMedico implements Serializable {
 	private String misurazione;
 
 	//questa proprietà non deve essere mappata nel db
-	@Transient
-	private Calciatore calciatore;
+//	@Transient
+//	private Calciatore calciatore;
 
 	private Date timestamp;
 		

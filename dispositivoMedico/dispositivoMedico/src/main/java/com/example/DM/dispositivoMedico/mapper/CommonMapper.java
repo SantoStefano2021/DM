@@ -19,7 +19,7 @@ public interface CommonMapper {
 	DispositivoMedico pipparella(DispositivoMedicoDTO dispDTO);
 
 
-@Mapping(source = " disp.calciatore.nome" , target = "nomeCalciatore")
+//@Mapping(source = " disp.calciatore.nome" , target = "nomeCalciatore")
 
 	DispositivoMedicoDTO map(DispositivoMedico disp);
 	
