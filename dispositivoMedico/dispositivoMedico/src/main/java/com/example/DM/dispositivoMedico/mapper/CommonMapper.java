@@ -16,14 +16,14 @@ import org.mapstruct.Mapping;
 public interface CommonMapper {
 
 	//oggetto target 		source
-	DispositivoMedico pipparella(DispositivoMedicoDTO dispDTO);
+	DispositivoMedico map(DispositivoMedicoDTO dispDTO);
 
 
 //@Mapping(source = " disp.calciatore.nome" , target = "nomeCalciatore")
 
 	DispositivoMedicoDTO map(DispositivoMedico disp);
 	
-	DispositivoMedicoServizioDTO pipparella(DispositivoMedicoServizio dmS);
+	DispositivoMedicoServizioDTO map(DispositivoMedicoServizio dmS);
 	
-	DispositivoMedicoAccountDTO pipparella(DispositivoMedicoAccount dispAcc);
+	DispositivoMedicoAccountDTO map(DispositivoMedicoAccount dispAcc);
 }

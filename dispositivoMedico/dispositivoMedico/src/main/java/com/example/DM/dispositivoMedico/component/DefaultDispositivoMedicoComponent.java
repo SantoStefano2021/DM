@@ -62,7 +62,7 @@ public class DefaultDispositivoMedicoComponent  implements DispositivoMedicoComp
 	public void saveDispositivoMedico(DispositivoMedicoDTO dm) {
 		// TODO Auto-generated method stub
 			
-		DispositivoMedico oggettoDM  = commonMapper.pipparella(dm);
+		DispositivoMedico oggettoDM  = commonMapper.map(dm);
 		dmDao.save(oggettoDM);
 		
 	}
@@ -136,7 +136,7 @@ public class DefaultDispositivoMedicoComponent  implements DispositivoMedicoComp
 		
 		return createListAllService()
 				.stream()
-				.map(commonMapper::pipparella)
+				.map(commonMapper::map)
 				.collect(toList());
 	}
 
