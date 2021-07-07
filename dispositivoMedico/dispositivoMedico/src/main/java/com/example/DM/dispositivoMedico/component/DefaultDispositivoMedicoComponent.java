@@ -252,7 +252,9 @@ final String uriGetDevice = "http://2.228.6.66:4581/getSensors";
 		
 		RestTemplate rt = new RestTemplate();
 		HttpHeaders reqHeaders = new HttpHeaders();
-		
+		/**
+		 * prendo dalla sessione l'attributo cookie salvato nell'header (set cookie)
+		 */
 		if (s.getAttribute("Cookie") == null) {
 			//logIn(s);
 			return "niente non c è il cookie fai il log in da postman ";
@@ -281,6 +283,10 @@ final String uriGetDevice = "http://2.228.6.66:4581/getSensors";
 
 				HttpEntity<String> response = restTemplateLogIn.exchange(uriLogIn, HttpMethod.POST, account, String.class);
 
+				/**
+				 * Prendo il cookie nell'head creato dalla chiamata log-in 
+				 * e lo salvo nella mia sessione
+				 */
 				String set_cookie = response.getHeaders().getFirst(HttpHeaders.SET_COOKIE);
 				// response.getHeaders().get
 				// annotazione cookie value
