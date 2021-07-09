@@ -36,4 +36,5 @@ public class DispositivoMedicoDTO implements Serializable{
 	// quindi quando incontro wner per me è ownerDispositivo
 	@JsonProperty(value="owner")
 	private String ownerDispositivo;
+	//
 }
