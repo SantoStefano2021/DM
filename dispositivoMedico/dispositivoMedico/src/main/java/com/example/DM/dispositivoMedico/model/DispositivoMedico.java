@@ -11,7 +11,6 @@ import javax.persistence.*;
 //import com.example.DM.dispositivoMedico.Calciatore;
 import org.hibernate.annotations.BatchSize;
 
-import com.example.DM.dispositivoMedico.paziente.model.Paziente;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -60,10 +59,10 @@ public class DispositivoMedico implements Serializable {
 	 * 
 	 * Eager carica tutto. tutte le relazioni che ho nelle classi
 	 */
-	@BatchSize(size = 1)
-	@ManyToMany(fetch = FetchType.EAGER , cascade = CascadeType.ALL,mappedBy = "listaDispositivo")
+	//@BatchSize(size = 1)
+	//@ManyToMany(fetch = FetchType.EAGER , cascade = CascadeType.ALL,mappedBy = "listaDispositivo")
 	//@JoinColumn(name="nome_paziente")
-	List<Paziente> listaPazienti;
+	//List<Paziente> listaPazienti;
 	
 	@Column(name = "owner_dispositivo")
 	private String ownerDispositivo;

@@ -20,7 +20,7 @@ import lombok.Setter;
 @AllArgsConstructor
 public class DispositivoMedicoDTO implements Serializable{
 
-	@NotEmpty(message="Non vuoto attenzione ", groups = gruppoUno.class)
+
 	private String nomeDispositivo;
 
 

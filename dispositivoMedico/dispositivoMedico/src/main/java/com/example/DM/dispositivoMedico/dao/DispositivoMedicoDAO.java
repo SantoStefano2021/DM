@@ -12,7 +12,7 @@ public interface DispositivoMedicoDAO extends JpaRepository<DispositivoMedico, S
 
 	List<DispositivoMedico> findByMatricola(String matricola);
 	
-	List<DispositivoMedico> findByListaPazienti(String nome);
+
 	//alt shit r
 	
 	

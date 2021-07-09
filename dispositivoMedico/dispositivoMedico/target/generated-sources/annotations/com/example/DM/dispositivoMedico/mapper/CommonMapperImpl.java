@@ -1,16 +1,14 @@
 package com.example.DM.dispositivoMedico.mapper;
 
-
 import com.example.DM.dispositivoMedico.dto.DispositivoMedicoDTO;
 import com.example.DM.dispositivoMedico.model.DispositivoMedico;
-;
 import javax.annotation.Generated;
 import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2021-07-05T12:25:59+0200",
-    comments = "version: 1.4.2.Final, compiler: javac, environment: Java 1.8.0-262 (OpenLogic-OpenJDK)"
+    date = "2021-07-09T15:18:49+0200",
+    comments = "version: 1.4.2.Final, compiler: javac, environment: Java 1.8.0_231 (Oracle Corporation)"
 )
 @Component
 public class CommonMapperImpl implements CommonMapper {
@@ -52,6 +50,4 @@ public class CommonMapperImpl implements CommonMapper {
 
         return dispositivoMedicoDTO;
     }
-
-
 }
