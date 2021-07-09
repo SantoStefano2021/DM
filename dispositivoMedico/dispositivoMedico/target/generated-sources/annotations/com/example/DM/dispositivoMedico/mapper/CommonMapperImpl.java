@@ -1,11 +1,9 @@
 package com.example.DM.dispositivoMedico.mapper;
 
-import com.example.DM.dispositivoMedico.account.DispositivoMedicoAccount;
-import com.example.DM.dispositivoMedico.account.dto.DispositivoMedicoAccountDTO;
+
 import com.example.DM.dispositivoMedico.dto.DispositivoMedicoDTO;
 import com.example.DM.dispositivoMedico.model.DispositivoMedico;
-import com.example.DM.dispositivoMedico.servizio.DispositivoMedicoServizio;
-import com.example.DM.dispositivoMedico.servizio.dto.DispositivoMedicoServizioDTO;
+;
 import javax.annotation.Generated;
 import org.springframework.stereotype.Component;
 
@@ -55,33 +53,5 @@ public class CommonMapperImpl implements CommonMapper {
         return dispositivoMedicoDTO;
     }
 
-    @Override
-    public DispositivoMedicoServizioDTO map(DispositivoMedicoServizio dmS) {
-        if ( dmS == null ) {
-            return null;
-        }
 
-        DispositivoMedicoServizioDTO dispositivoMedicoServizioDTO = new DispositivoMedicoServizioDTO();
-
-        dispositivoMedicoServizioDTO.setNome( dmS.getNome() );
-        dispositivoMedicoServizioDTO.setDescrizione( dmS.getDescrizione() );
-        dispositivoMedicoServizioDTO.setRitorno( dmS.getRitorno() );
-        dispositivoMedicoServizioDTO.setArgomenti( dmS.getArgomenti() );
-
-        return dispositivoMedicoServizioDTO;
-    }
-
-    @Override
-    public DispositivoMedicoAccountDTO map(DispositivoMedicoAccount dispAcc) {
-        if ( dispAcc == null ) {
-            return null;
-        }
-
-        DispositivoMedicoAccountDTO dispositivoMedicoAccountDTO = new DispositivoMedicoAccountDTO();
-
-        dispositivoMedicoAccountDTO.setUsername( dispAcc.getUsername() );
-        dispositivoMedicoAccountDTO.setPassword( dispAcc.getPassword() );
-
-        return dispositivoMedicoAccountDTO;
-    }
 }
