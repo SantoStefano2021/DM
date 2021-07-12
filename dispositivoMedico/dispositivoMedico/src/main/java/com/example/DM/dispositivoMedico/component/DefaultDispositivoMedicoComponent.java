@@ -1,19 +1,13 @@
 package com.example.DM.dispositivoMedico.component;
 
-import static java.util.Arrays.asList;
-import static java.util.stream.Collectors.toList;
 
-import java.util.List;
-import java.util.Set;
 
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import javax.validation.ConstraintValidator;
-import javax.validation.ConstraintViolation;
-import javax.validation.Validation;
-import javax.validation.Validator;
-
+import com.example.DM.dispositivoMedico.dao.DispositivoMedicoDAO;
 import com.example.DM.dispositivoMedico.dto.DispositivoMedicoAccountDTO;
+import com.example.DM.dispositivoMedico.dto.DispositivoMedicoDTO;
+import com.example.DM.dispositivoMedico.mapper.CommonMapper;
+import com.example.DM.dispositivoMedico.model.DispositivoMedico;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -22,12 +16,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
-import com.example.DM.dispositivoMedico.dao.DispositivoMedicoDAO;
+import javax.servlet.http.HttpSession;
+import javax.validation.Validator;
+import java.util.List;
 
-import com.example.DM.dispositivoMedico.dto.DispositivoMedicoDTO;
-import com.example.DM.dispositivoMedico.mapper.CommonMapper;
-import com.example.DM.dispositivoMedico.model.DispositivoMedico;
-
+import static java.util.stream.Collectors.toList;
 
 
 @Component
@@ -57,6 +50,18 @@ public class DefaultDispositivoMedicoComponent  implements DispositivoMedicoComp
 		
 	}
 
+	@Override
+	public List<DispositivoMedicoDTO> findAllDevice() {
+		return dmDao.findAll()
+				.stream()
+				.map(commonMapper::map)
+				.collect(toList());
+	}
+
+
+
+
+
 
 	//
 	
@@ -69,7 +74,6 @@ public class DefaultDispositivoMedicoComponent  implements DispositivoMedicoComp
 	@Override
 	public List<DispositivoMedicoDTO> findByMatricolaComponent(String matricola){
 		return dmDao.findByMatricola(matricola)
-						
 				.stream()
 			//	.filter(d -> d.getMatricola().equalsIgnoreCase(matricola))
 				.map(commonMapper::map)

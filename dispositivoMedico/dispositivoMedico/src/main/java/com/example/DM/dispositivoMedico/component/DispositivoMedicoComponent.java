@@ -1,13 +1,11 @@
 package com.example.DM.dispositivoMedico.component;
 
+import com.example.DM.dispositivoMedico.dto.DispositivoMedicoDTO;
+
 import java.util.List;
 
 
 import javax.servlet.http.HttpSession;
-
-
-import com.example.DM.dispositivoMedico.dto.DispositivoMedicoDTO;
-
 
 
 public interface DispositivoMedicoComponent {
@@ -16,6 +14,10 @@ public interface DispositivoMedicoComponent {
 	
 
 	List<DispositivoMedicoDTO> findByMatricolaComponent(String matricola);
+
+
+	 List<DispositivoMedicoDTO> findAllDevice() ;
+
 	
 
 

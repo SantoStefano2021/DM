@@ -7,10 +7,13 @@ com\example\DM\dispositivoMedico\dto\DispositivoMedicoAccountDTO.class
 com\example\DM\dispositivoMedico\component\DefaultDispositivoMedicoComponent.class
 com\example\DM\dispositivoMedico\controller\GenericController.class
 com\example\DM\dispositivoMedico\DispositivoMedicoApplication.class
+com\example\DM\dispositivoMedico\configure\ProvaConfig2.class
 com\example\DM\dispositivoMedico\service\DefaultDispositivoMedicoService.class
 com\example\DM\dispositivoMedico\component\DispositivoMedicoComponent.class
+com\example\DM\dispositivoMedico\configure\ProvaConfig.class
 com\example\DM\dispositivoMedico\model\DispositivoMedico$DispositivoMedicoBuilder.class
 com\example\DM\dispositivoMedico\mapper\CommonMapperImpl.class
 com\example\DM\dispositivoMedico\model\DispositivoMedicoAccount.class
+com\example\DM\dispositivoMedico\configure\Pippo.class
 com\example\DM\dispositivoMedico\controller\DispositivoMedicoController.class
 com\example\DM\dispositivoMedico\dao\DispositivoMedicoDAO.class

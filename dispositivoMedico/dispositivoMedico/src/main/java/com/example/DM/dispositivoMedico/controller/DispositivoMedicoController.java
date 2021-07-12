@@ -1,17 +1,13 @@
 package com.example.DM.dispositivoMedico.controller;
 
-import java.io.IOException;
 import java.util.List;
 
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
-import com.example.DM.dispositivoMedico.model.DispositivoMedico;
+import com.example.DM.dispositivoMedico.dto.DispositivoMedicoDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.server.Session;
-import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.DM.dispositivoMedico.dto.DispositivoMedicoDTO;
 import com.example.DM.dispositivoMedico.service.DispositivoMedicoSevice;
 
 
@@ -34,6 +29,13 @@ public class DispositivoMedicoController extends Session {
 	DispositivoMedicoSevice dmS;
 
 
+	@GetMapping("/findAll")
+	public List<DispositivoMedicoDTO> findAll() {
+
+		return dmS.findAll();
+
+
+	}
 
 
 	// chi fa l'iniezione (Container, apllication context )
@@ -44,7 +46,7 @@ public class DispositivoMedicoController extends Session {
 
 
 	/**
-	 * 
+	 *
 	 * @param dmDTO
 	 */
 	@PostMapping("/insert")

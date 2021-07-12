@@ -1,12 +1,10 @@
 package com.example.DM.dispositivoMedico.mapper;
 
+import com.example.DM.dispositivoMedico.dto.DispositivoMedicoDTO;
 import org.mapstruct.Mapper;
 
 
-import com.example.DM.dispositivoMedico.dto.DispositivoMedicoDTO;
 import com.example.DM.dispositivoMedico.model.DispositivoMedico;
-
-import org.mapstruct.Mapping;
 
 //mapstract libreria esterna
 //è una classe di mapper--spring è un bean che mi devi gestire registrare la classe all'interno del contesto

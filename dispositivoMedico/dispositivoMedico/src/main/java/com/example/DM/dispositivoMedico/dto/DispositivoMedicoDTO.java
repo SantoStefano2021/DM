@@ -21,20 +21,20 @@ import lombok.Setter;
 public class DispositivoMedicoDTO implements Serializable{
 
 
-	private String nomeDispositivo;
+    private String nomeDispositivo;
 
 
-	private String unitaDiMisurazione;
-	private String misurazione;
-	private Date timestamp;
-	private Date dataOperazione;
-	private String matricola;
-	private String nomePaziente;
+    private String unitaDiMisurazione;
+    private String misurazione;
+    private Date timestamp;
+    private Date dataOperazione;
+    private String matricola;
+    private String nomePaziente;
 
-	private String nomeCalciatore;
-	//Comunicate con un sitema esterno, il dto che vi passo ha la property oner mentre io la chiamo ownerDispositivo
-	// quindi quando incontro wner per me è ownerDispositivo
-	@JsonProperty(value="owner")
-	private String ownerDispositivo;
-	//
+    private String nomeCalciatore;
+    //Comunicate con un sitema esterno, il dto che vi passo ha la property oner mentre io la chiamo ownerDispositivo
+    // quindi quando incontro wner per me è ownerDispositivo
+    @JsonProperty(value="owner")
+    private String ownerDispositivo;
+    //
 }

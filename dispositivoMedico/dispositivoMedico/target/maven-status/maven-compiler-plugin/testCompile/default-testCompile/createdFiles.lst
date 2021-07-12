@@ -1,1 +1,3 @@
 com\example\DM\dispositivoMedico\DispositivoMedicoApplicationTests.class
+com\example\DM\dispositivoMedico\testFunctional\DefaultDispositivoMedicoControllerTest.class
+com\example\DM\dispositivoMedico\component\test\DefaultDispositivoMedicoComponentTest.class

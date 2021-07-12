@@ -1,20 +1,19 @@
 package com.example.DM.dispositivoMedico.service;
 
+import com.example.DM.dispositivoMedico.dto.DispositivoMedicoDTO;
+
 import java.util.List;
 
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
-
-import com.example.DM.dispositivoMedico.dto.DispositivoMedicoDTO;
-import com.example.DM.dispositivoMedico.model.DispositivoMedico;
-
 
 
 public interface DispositivoMedicoSevice {
 	
 
 		 void insertMisuraDispositivoMedico( DispositivoMedicoDTO dm );
+
+		 List<DispositivoMedicoDTO> findAll() ;
+
 		 
 
 		 List<DispositivoMedicoDTO> findByMatricola(String m);
