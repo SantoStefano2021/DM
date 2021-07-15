@@ -80,6 +80,9 @@ class DefaultDispositivoMedicoControllerTest {
 
 
         //when
+        /**
+         * Simulare con mock mvc biilder per simulare le chiamate rest.
+         */
         mockMvc.perform(get("/private/findAll"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$[0].matricola").value("TRM222"))

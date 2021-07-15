@@ -25,6 +25,9 @@ import com.example.DM.dispositivoMedico.service.DispositivoMedicoSevice;
 @RequestMapping("/private")
 public class DispositivoMedicoController extends Session {
 
+	/**
+	 * iniezione
+	 */
 	@Autowired
 	DispositivoMedicoSevice dmS;
 

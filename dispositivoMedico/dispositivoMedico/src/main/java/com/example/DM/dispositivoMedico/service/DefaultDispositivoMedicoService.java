@@ -11,7 +11,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.example.DM.dispositivoMedico.component.DispositivoMedicoComponent;
 
-
+/**
+ * bean service
+ */
 @Service
 @Transactional
 public class DefaultDispositivoMedicoService implements DispositivoMedicoSevice {

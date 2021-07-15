@@ -11,10 +11,15 @@ import com.example.DM.dispositivoMedico.model.DispositivoMedico;
 public interface DispositivoMedicoDAO extends JpaRepository<DispositivoMedico, String> {
 
 	List<DispositivoMedico> findByMatricola(String matricola);
+	List<DispositivoMedico> findByDispositivoMedico (String nomeDispositivo);
 
-
-
-
+/**
+ *
+ * TypedQuery<Department> query
+ *       = entityManager.createQuery(
+ *           "SELECT e.department FROM Employee e", Department.class);
+ *     List<Department> resultList = query.getResultList();
+**/
 
 
 	
