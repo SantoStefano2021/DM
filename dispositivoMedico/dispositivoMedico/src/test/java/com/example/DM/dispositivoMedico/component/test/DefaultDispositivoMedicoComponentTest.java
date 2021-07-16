@@ -30,6 +30,7 @@ import com.example.DM.dispositivoMedico.model.DispositivoMedico;
  * mentre
  * Nota che devi usare @RunWith(MockitoJUnitRunner.class)
  * o Mockito.initMocks(this) per inizializzare questi mock e iniettarli (JUnit 4).
+ * prove modifiche andrea---cosi escono a nome mio
  */
 @ExtendWith(MockitoExtension.class)
 class DefaultDispositivoMedicoComponentTest {
