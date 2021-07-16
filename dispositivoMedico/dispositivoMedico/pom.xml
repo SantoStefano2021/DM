@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -8,14 +10,21 @@
 		<version>2.5.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
 	<groupId>com.example.DM</groupId>
+
 	<artifactId>dispositivoMedico</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+
 	<name>dispositivoMedico</name>
+
 	<description>Demo project for Spring Boot</description>
+
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
+
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -48,13 +57,9 @@
 		<dependency>
 		    <groupId>org.mapstruct</groupId>
 		    <artifactId>mapstruct</artifactId>
-		    <version>1.4.2.Final</version> 
+		    <version>1.4.2.Final</version>
 		</dependency>
-		<dependency>
-			    <groupId>org.junit. A3W221ter</groupId>
-			    <artifactId>junit-jupiter-engine</artifactId>
-			    <scope>test</scope>
-			</dependency>
+
 			<dependency>
 			    <groupId>org.mockito</groupId>
 			    <artifactId>mockito-core</artifactId>
@@ -68,7 +73,7 @@
 		<dependency>
 		    <groupId>org.springframework.boot</groupId>
 		    <artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>	
+		</dependency>
 		<dependency>
 		<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -90,14 +95,14 @@
    			 <artifactId>hibernate-core</artifactId>
     		<version>5.4.0.Final</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-		
-		
+
+
 	</dependencies>
 
 	<build>

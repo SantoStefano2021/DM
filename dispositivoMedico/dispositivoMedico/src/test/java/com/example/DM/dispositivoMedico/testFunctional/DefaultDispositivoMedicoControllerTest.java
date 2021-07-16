@@ -44,8 +44,8 @@ class DefaultDispositivoMedicoControllerTest {
     }
 
 
-    @Test
-    public void insertDispositivo() {
+    //@Test
+    //public void insertDispositivo() {
         //given
       //  final DispositivoMedicoDTO dispositivoMedicoDTO = DispositivoMedicoDTO.builder()
         //        .build();
@@ -57,7 +57,7 @@ class DefaultDispositivoMedicoControllerTest {
 
 
         //then
-    }
+    //}
 
    // private static String convertJson(final DispositivoMedicoDTO disp) throws JsonProcessingException {
      //   final ObjectMapper obj = new ObjectMapper();
@@ -69,13 +69,13 @@ class DefaultDispositivoMedicoControllerTest {
     @Test
     void findAll() throws Exception {
         //given
-        final DispositivoMedicoDTO dispositivoMedicoDTO = DispositivoMedicoDTO.builder()
+       final DispositivoMedicoDTO dispositivoMedicoDTO = DispositivoMedicoDTO.builder()
                 .nomeDispositivo("Termometro")
                 .matricola("TRM222")
                 .build();
 
 
-        when(dmcService.findAll()).thenReturn(asList(dispositivoMedicoDTO));
+       when(dmcService.findAll()).thenReturn(asList(dispositivoMedicoDTO));
 
 
 
