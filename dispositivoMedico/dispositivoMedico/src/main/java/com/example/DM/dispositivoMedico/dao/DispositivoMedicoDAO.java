@@ -14,7 +14,7 @@ public interface DispositivoMedicoDAO extends JpaRepository<DispositivoMedico, S
 	List<DispositivoMedico> findByDispositivoMedico (String nomeDispositivo);
 
 /**
- *
+ *Esempio queyry
  * TypedQuery<Department> query
  *       = entityManager.createQuery(
  *           "SELECT e.department FROM Employee e", Department.class);

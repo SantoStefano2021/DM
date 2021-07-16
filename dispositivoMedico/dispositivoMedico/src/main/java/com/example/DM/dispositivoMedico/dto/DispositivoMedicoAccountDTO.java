@@ -5,6 +5,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * DTO data transfer object pattern architerali
+ */
+
 @Getter
 @Setter
 @AllArgsConstructor

@@ -55,7 +55,8 @@ public class DispositivoMedico implements Serializable {
 	/**
 	 * lazy significa che quando vai ad effettuare il caicamento dal db carica solo il paziente
 	 * e non i dispositivi medici della relazione, quindi snellisco il caricamento, ma così quando
-	 * avrò necessita dei dispositivi dorò caricare i dati ed effettuare una chiamata al db 
+	 * avrò necessita dei dispositivi dorò caricare i dati ed effettuare una chiamata al db
+	 *
 	 * 
 	 * Eager carica tutto. tutte le relazioni che ho nelle classi
 	 */

@@ -52,6 +52,7 @@ class DefaultDispositivoMedicoComponentTest {
     /**
      * @Mock crea un mock.
      * @InjectMocks crea un'istanza della classe quindi viene iniettata
+     *
      */
 
 

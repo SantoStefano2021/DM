@@ -37,7 +37,7 @@ class DefaultDispositivoMedicoControllerTest {
     @InjectMocks
     private DispositivoMedicoController underTest;
 
-    //
+    //mock mvc per test funzionali
     @BeforeEach
     public void setUp() {
         mockMvc = MockMvcBuilders.standaloneSetup(underTest).build();
@@ -81,7 +81,7 @@ class DefaultDispositivoMedicoControllerTest {
 
         //when
         /**
-         * Simulare con mock mvc biilder per simulare le chiamate rest.
+         * Simulare con mock mvc biilder per simulare le chiamate rest..
          */
         mockMvc.perform(get("/private/findAll"))
                 .andExpect(status().isOk())

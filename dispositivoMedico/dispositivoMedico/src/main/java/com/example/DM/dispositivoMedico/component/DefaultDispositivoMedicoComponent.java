@@ -26,7 +26,7 @@ import static java.util.stream.Collectors.toList;
 @Component
 public class DefaultDispositivoMedicoComponent  implements DispositivoMedicoComponent{
 	
-	
+	//iniezione per annotazione
 	@Autowired
 	private DispositivoMedicoDAO dmDao;
 	
