@@ -24,6 +24,7 @@ import lombok.Setter;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+//@Table (name = "dispositivoMedico")
 public class DispositivoMedico implements Serializable {
 
 	@Id

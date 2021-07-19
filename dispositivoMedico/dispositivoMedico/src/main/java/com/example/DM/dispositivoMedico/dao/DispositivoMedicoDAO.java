@@ -12,7 +12,10 @@ public interface DispositivoMedicoDAO extends JpaRepository<DispositivoMedico, S
 
 	List<DispositivoMedico> findByMatricola(String matricola);
 //	List<DispositivoMedico> findByDispositivoMedico (String nomeDispositivo);
-
+/**
+ * Hibernate Query Language (HQL) è un linguaggio di query orientato agli oggetti,
+ * simile a SQL, ma invece di operare su tabelle e colonne, HQL funziona con oggetti persistenti e le loro proprietà.
+ */
 /**
  *Esempio queyry
  * TypedQuery<Department> query

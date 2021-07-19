@@ -8,9 +8,11 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 import com.example.DM.dispositivoMedico.dto.DispositivoMedicoDTO;
 import com.example.DM.dispositivoMedico.service.DefaultDispositivoMedicoService;
@@ -26,12 +28,13 @@ import com.example.DM.dispositivoMedico.mapper.CommonMapper;
 import com.example.DM.dispositivoMedico.model.DispositivoMedico;
 
 /**
- * junit5
+ * junit5 @ExtendWith(MockitoExtension.class)
  * mentre
  * Nota che devi usare @RunWith(MockitoJUnitRunner.class)
  * o Mockito.initMocks(this) per inizializzare questi mock e iniettarli (JUnit 4).
  * prove modifiche andrea---cosi escono a nome mio
  */
+//@ExtendWith(MockitoExtension.class)
 @ExtendWith(MockitoExtension.class)
 class DefaultDispositivoMedicoComponentTest {
 
@@ -126,6 +129,31 @@ class DefaultDispositivoMedicoComponentTest {
         System.out.println("Stringa che sto leggendo " + valore + " ha lunghezza " + valore.length());
         return IntStream.range(0,valore.length()/2)
                 .noneMatch(i -> valore.charAt(i) != valore.charAt(valore.length()-i-1));
+    }
+
+    @Test
+    public void isAllTrue(){
+            List<Boolean> lista = Arrays.asList(true,false,true);
+
+            boolean returnAllTrue;
+        returnAllTrue = lista.stream().allMatch(this::checkT);
+
+        assertTrue(returnAllTrue);
+
+    }
+
+    /**
+     * metodo che ritorna il valore di ogni elmento
+     * @param booleans
+     * @return
+     */
+    public boolean checkT( boolean booleans){
+        System.out.println("Boolean: "+ booleans);
+       // return  booleans.stream().noneMatch(i->i.booleanValue()==true);
+         return  booleans;
+
+
+
     }
 
 
